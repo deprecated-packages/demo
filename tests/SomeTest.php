@@ -3,8 +3,9 @@
 namespace App\Tests;
 
 use App\SomeDemoService;
+use PHPUnit\Framework\TestCase;
 
-final class SomeTest extends \PHPUnit_Framework_TestCase
+final class SomeTest extends TestCase
 {
     /**
      * @expectedException SomeException
