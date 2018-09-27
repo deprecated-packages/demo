@@ -16,3 +16,10 @@ services:
 
     # case 4 - Yaml
     # vendor/bin/rector process config --level symfony30 --dry-run
+
+    # case 5 - own rules?
+    # type here
+    # - change method name
+
+    # case 6 - sets or rectors?
+    # --level
