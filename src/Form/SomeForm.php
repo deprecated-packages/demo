@@ -2,13 +2,13 @@
 
 namespace App\Form;
 
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\FormBuilderInterface;
 
-final class SomeForm
+final class SomeForm extends FormType
 {
-    public function build()
+    public function buildForm(FormBuilderInterface $formBuilder, array $options)
     {
-        $formBuilder = new FormBuilder;
         $formBuilder->add('task', 'form.type.text');
 
         // not just a string, but specific type
