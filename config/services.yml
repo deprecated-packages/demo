@@ -1,4 +1,6 @@
 services:
-    some_demo_service:
-        class: App\SomeDemoService
+    _defaults:
         public: true
+
+    some_demo_service:
+        class: 'App\SomeDemoService'
