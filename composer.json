@@ -5,14 +5,15 @@
         "symfony/framework-bundle": "^4.2"
     },
     "require-dev": {
-        "rector/rector": "^0.3.40",
+        "rector/rector": "^0.4",
         "phpunit/phpunit": "^8.0",
         "tracy/tracy": "^2.5",
         "symplify/easy-coding-standard": "^5.4"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src"
+            "App\\": "src",
+            "Utils\\Rector\\": "utils/Rector"
         },
         "classmap": [
             "app"
