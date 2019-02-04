@@ -10,7 +10,7 @@ namespace App;
 
 final class SomeDemoService
 {
-    // @todo should be autocomplete by php74
+    // @todo should be autocompleted by php74
     private $value;
 
     public function someMethod()
