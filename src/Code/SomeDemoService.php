@@ -1,16 +1,9 @@
 <?php declare(strict_types=1);
 
-// @todo use for gifs
-// --level code-quality
-// --level php70
-// --level php71
-// --level php74
-
-namespace App;
+namespace App\Code;
 
 final class SomeDemoService
 {
-    // @todo should be autocompleted by php74
     private $value;
 
     public function someMethod()
