@@ -13,7 +13,7 @@ script:
     - vendor/bin/rector process src/Controller --dry-run
 
     # apply
-    - vendor/bin/rector process src/Form
+    - vendor/bin/rector process src/Form --dry-run
 
     # with style option test
     - vendor/bin/rector process src/Form --with-style
