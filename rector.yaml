@@ -1,4 +1,3 @@
-# rector.yml
 services:
     # case 1
     Rector\Symfony\Rector\FrameworkBundle\GetToConstructorInjectionRector: ~
@@ -13,9 +12,6 @@ services:
     # case 3 - PHPUnit
     # vendor/bin/rector process tests --level phpunit60 --dry-run
     # vendor/bin/rector process tests --level phpunit60 --with-style
-
-    # case 4 - Yaml
-    # vendor/bin/rector process config --level symfony30 --dry-run
 
     # case 5 - own rules?
     # type here

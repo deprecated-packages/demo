@@ -12,4 +12,19 @@ composer install
 
 ## How to Run?
 
-Just see [`rector.yml`](/rector.yml) and [`.travis.yml](/.travis.yml).
+```bash
+# case 1 - @todo PHP code diff
+# Rector\Symfony\Rector\FrameworkBundle\GetToConstructorInjectionRector: ~
+vendor/bin/rector process src/Controller --dry-run
+vendor/bin/rector process src/Controller --with-style
+
+# case 2 - Symfony
+# case 1 - @todo PHP code diff
+Rector\Symfony\Rector\Form\StringFormTypeToClassRector: ~
+# vendor/bin/rector process src/Form --dry-run
+# vendor/bin/rector process src/Form --with-style
+
+# case 3 - PHPUnit
+# case 1 - @todo PHP code diff
+# vendor/bin/rector process tests --level phpunit60 --dry-run
+# vendor/bin/rector process tests --level phpunit60 --with-style
