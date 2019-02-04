@@ -1,11 +1,11 @@
-services:
+#services:
     # case 1
-    Rector\Symfony\Rector\FrameworkBundle\GetToConstructorInjectionRector: ~
+#    Rector\Symfony\Rector\FrameworkBundle\GetToConstructorInjectionRector: ~
     # vendor/bin/rector process src/Controller --dry-run
     # vendor/bin/rector process src/Controller --with-style
 
     # case 2 - Symfony
-    Rector\Symfony\Rector\Form\StringFormTypeToClassRector: ~
+#    Rector\Symfony\Rector\Form\StringFormTypeToClassRector: ~
     # vendor/bin/rector process src/Form --dry-run
     # vendor/bin/rector process src/Form --with-style
 
