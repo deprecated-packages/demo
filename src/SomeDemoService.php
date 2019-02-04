@@ -32,7 +32,7 @@ final class SomeDemoService
         return $value === null ? 10 : $value;
     }
 
-    public function isCourseFull(?array $visitors)
+    public function isCourseFull(array $visitors)
     {
         if (count($visitors)) {
             return true;
