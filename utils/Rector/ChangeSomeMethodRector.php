@@ -2,6 +2,7 @@
 
 namespace Utils\Rector;
 
+use App\UglyCodeMakeInTrain\Visitor;
 use PhpParser\Node;
 use Rector\Rector\AbstractRector;
 use Rector\RectorDefinition\RectorDefinition;
@@ -14,19 +15,30 @@ final class ChangeSomeMethodRector extends AbstractRector
      */
     public function getNodeTypes(): array
     {
-        // TODO: Implement getNodeTypes() method.
+        return [Node\Expr\New_::class];
     }
 
     /**
+     * @param Node\Expr\New_ $node
      * Process Node of matched type
      */
     public function refactor(Node $node): ?Node
     {
-        // TODO: Implement refactor() method.
+        if ($this->isType($node, Visitor::class) === false) {
+            return null;
+        }
+
+        $surname = $node->args[0]->value;
+        $name = $node->args[1]->value;
+
+        $node->args[1]->value = $surname;
+        $node->args[0]->value = $name;
+
+        return $node;
     }
 
     public function getDefinition(): RectorDefinition
     {
-        // TODO: Implement getDefinition() method.
+        // not needed for demo
     }
 }
