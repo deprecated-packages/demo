@@ -1,3 +1,10 @@
 services:
-    Utils\Rector\ChangeSomeMethodRector: ~
+#    Utils\Rector\ChangeSomeMethodRector: ~
 
+
+# also sets for better code
+# vendor/bin/rector p src --level code-quality --dry-run
+
+# also sets for instant upgrades
+# vendor/bin/rector p src --level php71 --dry-run
+# vendor/bin/rector p src --level php74 --dry-run
