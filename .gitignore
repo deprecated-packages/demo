@@ -5,3 +5,5 @@
 # composer
 /vendor
 composer.lock
+
+/var
