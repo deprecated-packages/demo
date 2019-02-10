@@ -17,5 +17,10 @@
         "classmap": [
             "app"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Utils\\": "utils"
+        }
     }
 }
