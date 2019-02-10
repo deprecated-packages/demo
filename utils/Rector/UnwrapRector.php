@@ -2,6 +2,7 @@
 
 namespace Utils\Rector;
 
+use App\Enumag\Contract\AggregateStateInterface;
 use PhpParser\Node;
 use PhpParser\Node\Expr\Closure;
 use PhpParser\Node\Expr\MethodCall;
@@ -29,6 +30,12 @@ final class UnwrapRector extends AbstractRector
      */
     public function refactor(Node $node): ?Node
     {
+        // verify type
+        if (! $this->isType($node, AggregateStateInterface::class)) {
+            return null;
+        }
+
+        // verify class method name
         if (! $this->isName($node, 'apply')) {
             return null;
         }
