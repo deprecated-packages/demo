@@ -1,9 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\VeryOldPhpCode;
+namespace App\CodeQuality;
 
 // code-quality
-// php74
 final class TypeDeclarations
 {
     private $value;

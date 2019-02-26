@@ -1,6 +1,6 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace App\VeryOldPhpCode;
+namespace App\PhpCodeUpgrade;
 
 // php71
 // php72
