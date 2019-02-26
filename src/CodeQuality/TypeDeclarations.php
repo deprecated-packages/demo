@@ -3,7 +3,6 @@
 namespace App\VeryOldPhpCode;
 
 // code-quality
-// php74
 final class TypeDeclarations
 {
     private $value;
