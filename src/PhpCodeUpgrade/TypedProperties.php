@@ -20,7 +20,7 @@ final class TypedProperties
     /**
      * @var object
      */
-    public $object;
+    public $someObject;
 
     /**
      * @var bool
