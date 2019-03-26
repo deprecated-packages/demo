@@ -1,4 +1,8 @@
+parameters:
+    php_version_features: '7.4'
+
 services:
+# vendor/bin/rector process src --level php53
 # vendor/bin/rector process src --level php71
 # vendor/bin/rector process src --level php72
 # vendor/bin/rector process src --level php73
