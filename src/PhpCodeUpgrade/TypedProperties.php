@@ -32,10 +32,7 @@ final class TypedProperties
      */
     public $iterable = [1, 2, 3];
 
-    private $withoutDocBlock;
-
     public function run(string $value)
     {
-        $this->withoutDocBlock = $value;
     }
 }

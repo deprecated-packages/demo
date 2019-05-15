@@ -1,12 +1,24 @@
 parameters:
     php_version_features: '7.4'
 
-services:
-# vendor/bin/rector process src --level php53
-# vendor/bin/rector process src --level php71
-# vendor/bin/rector process src --level php72
-# vendor/bin/rector process src --level php73
-# vendor/bin/rector process src --level php74
-# vendor/bin/rector process src --level code-quality
-# CI
+# demo
+# 1. php
+# vendor/bin/rector process src --level php71 -d
+# vendor/bin/rector process src --level php72 -d
+# vendor/bin/rector process src --level php74 -d
+
+# 2. code quality
+# vendor/bin/rector process src --level code-quality -d
+
+# 3. dead code
+# vendor/bin/rector process src --level dead-code -d
+
+# 4. twig
+# vendor/bin/rector process src --level twig-underscore-to-namespace -d
+# vendor/bin/rector process src --level coding-style -d
+
+# 5. phpunit
+# vendor/bin/rector process src --level phpunit70 -d
+
+# 6. CI
 # vendor/bin/rector levels

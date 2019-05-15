@@ -1,10 +1,11 @@
 {
     "require": {
-        "php": "^7.3"
+        "php": "^7.3",
+        "twig/twig": "^2.4"
     },
     "require-dev": {
-        "rector/rector": "^0.4",
-        "phpunit/phpunit": "^8.0",
+        "rector/rector": "^0.4.12",
+        "phpunit/phpunit": "^7.0",
         "tracy/tracy": "^2.5",
         "symplify/easy-coding-standard": "^5.4"
     },
@@ -15,7 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Utils\\Rector\\": "utils/Rector"
+            "App\\Tests\\": "tests"
         }
     }
 }
