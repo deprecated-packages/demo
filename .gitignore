@@ -1,6 +1,5 @@
 # Symfony
-/app/cache
-/app/logs
+/var
 
 # composer
 /vendor
