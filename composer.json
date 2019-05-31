@@ -4,14 +4,15 @@
         "twig/twig": "^2.4"
     },
     "require-dev": {
-        "rector/rector": "^0.4.12",
+        "rector/rector": "dev-master",
         "phpunit/phpunit": "^7.0",
         "tracy/tracy": "^2.5",
-        "symplify/easy-coding-standard": "^5.4"
+        "symplify/easy-coding-standard": "^6.0"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src"
+            "App\\": "src",
+            "Utils\\Rector\\": "utils/Rector/src"
         }
     },
     "autoload-dev": {

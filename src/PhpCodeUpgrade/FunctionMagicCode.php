@@ -15,6 +15,12 @@ final class FunctionMagicCode
         $this->property[] = 1;
     }
 
+    // https://3v4l.org/KiGFs - @todo show for php71 in config and php74 in config + autodetection
+    public function countOnNullable(?array $items)
+    {
+        return count($items);
+    }
+
     public function sort(array $items)
     {
         // level: Wordpress!
