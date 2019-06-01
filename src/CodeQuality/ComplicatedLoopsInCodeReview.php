@@ -2,8 +2,8 @@
 
 namespace App\CodeQuality;
 
-// code-quality
-final class EarlyReturnsAndComplicatedLoopsInCodeReview
+// run: vendor/bin/rector process src/CodeQuality/ComplicatedLoopsInCodeReview.php --set code-quality -n
+final class ComplicatedLoopsInCodeReview
 {
     public function getDefalutValue($value)
     {

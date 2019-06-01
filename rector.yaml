@@ -1,5 +1,5 @@
 parameters:
-    php_version_features: '7.2' # try switching to "7.1" with "CountOnNullable"
+    php_version_features: '7.2'
 
 # demo
 # 1. php
@@ -10,7 +10,6 @@ parameters:
 
 # 2. code quality
 # vendor/bin/rector process src --level code-quality -n
-
 
 # vendor/bin/rector process src --level type-declaration -n
 
@@ -25,7 +24,6 @@ parameters:
 # 5. phpunit
 # vendor/bin/rector process src --level phpunit70 -n
 
-# 6. CI
 # vendor/bin/rector levels
 
 

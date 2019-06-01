@@ -6,6 +6,7 @@ use App\Exception\InvalidLanguageException;
 use Twig_Extension;
 use Twig_Filter;
 
+// run: vendor/bin/rector process src/Twig --set twig-underscore-to-namespace -n
 final class ConferenceTwigExtension extends Twig_Extension
 {
     /**
@@ -26,7 +27,7 @@ final class ConferenceTwigExtension extends Twig_Extension
 
     private function ensureLanguageIsValid(string $language): void
     {
-        $allowedLanguages = ['ru', 'en'];
+        $allowedLanguages = ['uk', 'en'];
 
         if (in_array($language, $allowedLanguages, true)) {
             return;

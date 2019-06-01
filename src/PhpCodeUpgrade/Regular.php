@@ -2,9 +2,8 @@
 
 namespace App\PhpCodeUpgrade;
 
-use Nette\Utils\Strings;
-
-// php73
+// show: https://3v4l.org/v1pdC
+// run: vendor/bin/rector process src/PhpCodeUpgrade/Regular.php --set php73 -n
 final class Regular
 {
     private const NON_COMPAT_PATTERN = '#[\w-()]#';
@@ -12,11 +11,6 @@ final class Regular
     public function winnerFunction(string $value)
     {
         return preg_match("#[\w-()]#", $value);
-    }
-
-    public function matchStaticCall(string $value)
-    {
-        return Strings::match($value, "#[\w-()]#");
     }
 
     public function matchConstant(string $value)

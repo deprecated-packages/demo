@@ -2,8 +2,8 @@
 
 namespace App\CodeQuality;
 
-// code-quality
-final class HungerController
+// run: vendor/bin/rector process src/CodeQuality/AnEarlyReturns.php --set code-quality -n
+final class AnEarlyReturns
 {
     private $myMeal;
     private $myFriendsMeal;

@@ -4,7 +4,8 @@ namespace App\PhpCodeUpgrade;
 
 use App\ValueObjects\AnotherClass;
 
-// php74
+// run: vendor/bin/rector process src/PhpCodeUpgrade/TypedProperties.php --set php74 -n
+// check "rector.yaml" update config with "php7.4"
 final class TypedProperties
 {
     /**
