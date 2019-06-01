@@ -2,19 +2,9 @@
 
 namespace App\PhpCodeUpgrade;
 
-// php71
-// php72
-// php74
-final class FunctionMagicCode
+// run: vendor/bin/rector process src/PhpCodeUpgrade/CreateFunction.php --set php72 -n
+final class CreateFunction
 {
-    private $property;
-
-    public function run()
-    {
-        $this->property = '';
-        $this->property[] = 1;
-    }
-
     public function sort(array $items)
     {
         // level: Wordpress!

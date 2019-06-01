@@ -7,6 +7,7 @@ use Twig\Extension\ExtensionInterface;
 use App\Twig\ConferenceTwigExtension;
 use PHPUnit\Framework\TestCase;
 
+// run: vendor/bin/rector process tests --set phpunit70 -n
 final class ConferenceTwigExtensionTest extends TestCase
 {
     /**
@@ -18,7 +19,7 @@ final class ConferenceTwigExtensionTest extends TestCase
      * @var mixed[][]
      */
     private $talks = [
-        ['name' => 'Docker', 'language' => 'ru'],
+        ['name' => 'Docker', 'language' => 'uk'],
         ['name' => 'PHP 7.4 types', 'language' => 'en'],
     ];
 
@@ -34,8 +35,8 @@ final class ConferenceTwigExtensionTest extends TestCase
 
         $filterCallable = $filters[0]->getCallable();
 
-        $russianTalks = $filterCallable($this->talks, 'ru');
-        $this->assertCount(1, $russianTalks);
+        $ukrainianTalks = $filterCallable($this->talks, 'uk');
+        $this->assertCount(1, $ukrainianTalks);
 
         $englishTalks = $filterCallable($this->talks, 'en');
         $this->assertCount(1, $englishTalks);
@@ -43,7 +44,7 @@ final class ConferenceTwigExtensionTest extends TestCase
 
     /**
      * @expectedException \App\Exception\InvalidLanguageException
-     * @expectedExceptionMessageRegExp 'Language "\w+" is invalid, pick one of "ru", "en"'
+     * @expectedExceptionMessageRegExp 'Language "\w+" is invalid, pick one of "uk", "en"'
      */
     public function testInvalidLanguage()
     {

@@ -2,13 +2,14 @@
 
 namespace App\CodeQuality;
 
-// code-quality
-final class TypeDeclarations
+// run: vendor/bin/rector process src/CodeQuality/ComplicatedLoopsInCodeReview.php --set code-quality -n
+final class ComplicatedLoopsInCodeReview
 {
     public function getDefalutValue($value)
     {
         return $value === null ? 10 : $value;
     }
+
     public function isCourseFull(array $visitors)
     {
         if (count($visitors)) {
@@ -17,6 +18,7 @@ final class TypeDeclarations
 
         return false;
     }
+
     public function tooComplexArrayVerification(array $items, string $name)
     {
         foreach ($items as $item) {
@@ -27,6 +29,7 @@ final class TypeDeclarations
 
         return false;
     }
+
     public function isNullOrValue($oldToNewFunctions, string $currentFunction)
     {
         foreach ($oldToNewFunctions as $oldFunction => $newFunction) {

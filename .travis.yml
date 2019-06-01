@@ -1,22 +1,12 @@
 language: php
 
-php:
-    - 7.3
+php: '7.3'
 
 install:
     - composer install
-    # to enable "--with-style" option
-    - composer require symplify/easy-coding-standard --dev
 
 script:
-    # dry run
-    - vendor/bin/rector process src/Controller --dry-run
-
-    # apply
-    - vendor/bin/rector process src/Form --dry-run
-
-    # with style option test
-    - vendor/bin/rector process src/Form --with-style
+    - vendor/bin/phpunit
 
 notifications:
     email: false
