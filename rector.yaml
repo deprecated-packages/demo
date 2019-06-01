@@ -1,5 +1,5 @@
 parameters:
-    php_version_features: '7.3'
+    php_version_features: '7.2' # try switching to "7.1" with "CountOnNullable"
 
 # demo
 # 1. php

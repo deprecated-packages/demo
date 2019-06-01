@@ -2,12 +2,12 @@
 
 namespace App\PhpCodeUpgrade;
 
-// php71
-// php72
-// php74
+// show: https://3v4l.org/KiGFs
+// run: vendor/bin/rector process src/PhpCodeUpgrade/CountOnNullable.php --set php71 -n
+// check: "rector.yaml" config for PHP version
 final class CountOnNullable
 {
-    // https://3v4l.org/KiGFs - @todo show for php71 in config and php74 in config + autodetection
+
     public function countList(?array $items)
     {
         return count($items);

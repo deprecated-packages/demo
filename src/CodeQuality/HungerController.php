@@ -5,17 +5,17 @@ namespace App\CodeQuality;
 // code-quality
 final class HungerController
 {
-    private $first;
-    private $second;
+    private $myMeal;
+    private $myFriendsMeal;
 
     public function getNearestMeal()
     {
-         if (null !== $this->first) {
-             return $this->first;
+         if (null !== $this->myMeal) {
+             return $this->myMeal;
          }
 
-         if (null !== $this->second) {
-             return $this->second;
+         if (null !== $this->myFriendsMeal) {
+             return $this->myFriendsMeal;
          }
 
         return null;
@@ -27,6 +27,7 @@ final class HungerController
             return 'lets have lunch';
         }
 
-        return 'breakfast it it';
+        $meal = 'breakfast it it';
+        return $meal;
     }
 }

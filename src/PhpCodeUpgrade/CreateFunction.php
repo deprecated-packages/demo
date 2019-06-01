@@ -2,17 +2,9 @@
 
 namespace App\PhpCodeUpgrade;
 
-// php71
-// php72
-// php74
+// run: vendor/bin/rector process src/PhpCodeUpgrade/CreateFunction.php --set php72 -n
 final class CreateFunction
 {
-    // https://3v4l.org/KiGFs - @todo show for php71 in config and php74 in config + autodetection
-    public function countOnNullable(?array $items)
-    {
-        return count($items);
-    }
-
     public function sort(array $items)
     {
         // level: Wordpress!
