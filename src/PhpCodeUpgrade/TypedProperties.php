@@ -43,4 +43,13 @@ final class TypedProperties
 
         return $this->surname;
     }
+
+    public function anonymous()
+    {
+        $value = function($name) {
+            return $name . ', lets party!';
+        };
+
+        return $value('People');
+    }
 }
