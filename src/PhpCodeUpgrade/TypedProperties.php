@@ -6,6 +6,8 @@ use App\ValueObjects\AnotherClass;
 
 // run: vendor/bin/rector process src/PhpCodeUpgrade/TypedProperties.php --set php74 -n
 // check "rector.yaml" update config with "php7.4"
+
+// run: vendor/bin/rector proces src/PhpCodeUpgrade/TypedProperties.php --set type-declaratoin
 final class TypedProperties
 {
     /**
@@ -19,9 +21,9 @@ final class TypedProperties
     public $string;
 
     /**
-     * @var object
+     * @var string
      */
-    public $someObject;
+    public $surname;
 
     /**
      * @var bool
@@ -33,7 +35,12 @@ final class TypedProperties
      */
     public $iterable = [1, 2, 3];
 
-    public function run(string $value)
+    public function run()
     {
+        if ($this->string !== '') {
+            return $this->string;
+        }
+
+        return $this->surname;
     }
 }
