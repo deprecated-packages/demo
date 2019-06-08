@@ -42,12 +42,10 @@ final class ConferenceTwigExtensionTest extends TestCase
         $this->assertCount(1, $englishTalks);
     }
 
-    /**
-     * @expectedException \App\Exception\InvalidLanguageException
-     * @expectedExceptionMessageRegExp 'Language "\w+" is invalid, pick one of "uk", "en"'
-     */
     public function testInvalidLanguage()
     {
+        $this->expectException('App\Exception\InvalidLanguageException');
+        $this->expectExceptionMessageRegExp('\'Language "\w+" is invalid, pick one of "uk", "en"\'');
         $filters = $this->conferenceTwigExtension->getFilters();
         $this->assertCount(1, $filters);
 

@@ -3,19 +3,19 @@
 namespace App\Twig;
 
 use App\Exception\InvalidLanguageException;
-use Twig_Extension;
-use Twig_Filter;
+use \Twig\Extension\AbstractExtension;
+use \Twig\TwigFilter;
 
 // run: vendor/bin/rector process src/Twig --set twig-underscore-to-namespace -n
-final class ConferenceTwigExtension extends Twig_Extension
+final class ConferenceTwigExtension extends \Twig\Extension\AbstractExtension
 {
     /**
-     * @return Twig_Filter[]
+     * @return \Twig\TwigFilter[]
      */
     public function getFilters(): array
     {
         return [
-            new Twig_Filter('filter_by_language', function (array $items, string $language) {
+            new \Twig\TwigFilter('filter_by_language', function (array $items, string $language) {
                 $this->ensureLanguageIsValid($language);
 
                 return array_filter($items, function ($item) use ($language) {

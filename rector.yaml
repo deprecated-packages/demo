@@ -28,5 +28,5 @@ parameters:
 
 
 # @todo is that black magic? Not really - show MyFirstRector
-#services:
-#    Utils\Rector\MyFirstRector: ~
+services:
+    Utils\Rector\MyFirstRector: ~
