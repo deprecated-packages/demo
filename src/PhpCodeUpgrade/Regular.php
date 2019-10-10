@@ -18,5 +18,3 @@ final class Regular
         return preg_match_all(self::NON_COMPAT_PATTERN, $value);
     }
 }
-
-

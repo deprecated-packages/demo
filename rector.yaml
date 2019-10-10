@@ -1,5 +1,5 @@
 parameters:
-    php_version_features: '7.2'
+    php_version_features: '7.1'
 
 # demo
 # 1. php

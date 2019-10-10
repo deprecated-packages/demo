@@ -7,7 +7,7 @@ use Twig\Extension\ExtensionInterface;
 use App\Twig\ConferenceTwigExtension;
 use PHPUnit\Framework\TestCase;
 
-// run: vendor/bin/rector process tests --set phpunit70 -n
+// run: "vendor/bin/rector process tests --set phpunit70 -n"
 final class ConferenceTwigExtensionTest extends TestCase
 {
     /**
