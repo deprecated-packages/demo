@@ -32,6 +32,8 @@ final class ComplicatedLoopsInCodeReview
 
     public function isNullOrValue($oldToNewFunctions, string $currentFunction)
     {
+        // return array_key_exists($currentFunction, $oldToNewFunctions) ? $oldToNewFunctions[$currentFunction] : null;
+
         foreach ($oldToNewFunctions as $oldFunction => $newFunction) {
             if ($currentFunction === $oldFunction) {
                 return $newFunction;

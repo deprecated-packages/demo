@@ -1,32 +1,24 @@
 parameters:
-    php_version_features: '7.2'
+    php_version_features: '7.1'
 
 # demo
 # 1. php
-# vendor/bin/rector process src --level php71 -n
-# vendor/bin/rector process src --level php72 -n
-# not only improve, but also fix BC breaks
-# vendor/bin/rector process src --level php74 -n
+# vendor/bin/rector process src/PhpCodeUpgrade/CountOnNullableAndArrayAssign.php --set php71 -n
+# vendor/bin/rector process src/PhpCodeUpgrade/CreateFunction.php --set php72 -n
 
 # 2. code quality
-# vendor/bin/rector process src --level code-quality -n
+# vendor/bin/rector process src/CodeQuality --set code-quality -n
+# vendor/bin/rector process src/PhpCodeUpgrade --set type-declaration -n
 
-# vendor/bin/rector process src --level type-declaration -n
+# 3. twig
+# vendor/bin/rector process src --set twig-underscore-to-namespace -n
 
+# 4. phpunit
+# vendor/bin/rector process src tests --set phpunit70 -n
 
-# 3. dead code
-# vendor/bin/rector process src --level dead-code -n
-
-# 4. twig
-# vendor/bin/rector process src --level twig-underscore-to-namespace -n
-# vendor/bin/rector process src --level coding-style -n
-
-# 5. phpunit
-# vendor/bin/rector process src --level phpunit70 -n
-
-# vendor/bin/rector levels
+# typed properties - @todo change param to the PHP 7.4
+# not only improve, but also fix BC breaks
+# vendor/bin/rector process src --set php74 -n
 
 
-# @todo is that black magic? Not really - show MyFirstRector
-#services:
-#    Utils\Rector\MyFirstRector: ~
+# vendor/bin/rector sets
