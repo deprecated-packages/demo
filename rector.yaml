@@ -3,22 +3,22 @@ parameters:
 
 # demo
 # 1. php
-# vendor/bin/rector process src/PhpCodeUpgrade/CountOnNullableAndArrayAssign.php --set php71 -n
-# vendor/bin/rector process src/PhpCodeUpgrade/CreateFunction.php --set php72 -n
+# vendor/bin/rector process src/PhpCodeUpgrade/CountOnNullableAndArrayAssign.php --set php71 --dry-run
+# vendor/bin/rector process src/PhpCodeUpgrade/CreateFunction.php --set php72 --dry-run
 
 # 2. code quality
-# vendor/bin/rector process src/CodeQuality --set code-quality -n
-# vendor/bin/rector process src/PhpCodeUpgrade --set type-declaration -n
+# vendor/bin/rector process src/CodeQuality --set code-quality --dry-run
+# vendor/bin/rector process src/PhpCodeUpgrade --set type-declaration --dry-run
 
 # 3. twig
-# vendor/bin/rector process src --set twig-underscore-to-namespace -n
+# vendor/bin/rector process src --set twig-underscore-to-namespace --dry-run
 
 # 4. phpunit
-# vendor/bin/rector process src tests --set phpunit70 -n
+# vendor/bin/rector process src tests --set phpunit70 --dry-run
 
 # typed properties - @todo change param to the PHP 7.4
 # not only improve, but also fix BC breaks
-# vendor/bin/rector process src --set php74 -n
+# vendor/bin/rector process src --set php74 --dry-run
 
-
+# list all available sets:
 # vendor/bin/rector sets
